@@ -1,8 +1,8 @@
-runtime macros/matchit.vim
 source ~/dotfiles/bundles.vim
+runtime macros/matchit.vim
 
 syntax enable
-:filetype plugin on
+filetype plugin indent on
 colorscheme Black
 
 set guifont=Source\ Code\ Pro:h14
