@@ -47,6 +47,7 @@ nmap <leader>et :tabe <C-R>=expand('%:h').'/'<cr>
 
 " Git Mappings
 vmap <Leader>b :<C-U>!git blame <C-R>=expand("%:p") <CR> \| sed -n <C-R>=line("'<") <CR>,<C-R>=line("'>") <CR>p <CR>
+vmap <Leader>gi :Gist<cr>
 map <Leader>gw :!git add . && git commit -m 'WIP' && git push<cr>
 map <Leader>gd :Gdiff<cr>
 map <Leader>gs :Gstatus<cr>
@@ -64,3 +65,8 @@ if executable('ag')
   " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 endif
+
+let g:gist_clip_command = 'pbcopy'
+let g:gist_detect_filetype = 1
+let g:gist_post_private = 1
+let g:gist_open_browser_after_post = 1

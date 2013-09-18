@@ -28,6 +28,8 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/syntastic'
 Bundle 'ervandew/supertab'
 Bundle 'jcfaria/Vim-R-plugin'
+Bundle 'mattn/webapi-vim'
+Bundle 'mattn/gist-vim'
 
 Bundle 'kana/vim-textobj-user'
 Bundle 'MarcWeber/vim-addon-mw-utils'
