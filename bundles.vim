@@ -30,6 +30,7 @@ Bundle 'ervandew/supertab'
 Bundle 'jcfaria/Vim-R-plugin'
 Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
+Bundle 'airblade/vim-gitgutter'
 
 Bundle 'kana/vim-textobj-user'
 Bundle 'MarcWeber/vim-addon-mw-utils'

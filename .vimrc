@@ -3,7 +3,7 @@ runtime macros/matchit.vim
 
 syntax enable
 filetype plugin indent on
-colorscheme Black
+colorscheme darkzen
 
 set guifont=Source\ Code\ Pro:h14
 set number relativenumber
