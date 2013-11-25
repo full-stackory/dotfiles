@@ -1,3 +1,4 @@
+set nocompatible
 source ~/dotfiles/bundles.vim
 runtime macros/matchit.vim
 
@@ -19,6 +20,7 @@ set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 set autoindent
+set backspace=2
 set laststatus=2
 set showmatch
 set incsearch
@@ -45,8 +47,14 @@ nmap <leader>es :sp <C-R>=expand('%:h').'/'<cr>
 nmap <leader>ev :vsp <C-R>=expand('%:h').'/'<cr>
 nmap <leader>et :tabe <C-R>=expand('%:h').'/'<cr>
 
+" Rspec.vim mappings
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
+
 " Git Mappings
-vmap <Leader>b :<C-U>!git blame <C-R>=expand("%:p") <CR> \| sed -n <C-R>=line("'<") <CR>,<C-R>=line("'>") <CR>p <CR>
+vmap <Leader>gb :<C-U>!git blame <C-R>=expand("%:p") <CR> \| sed -n <C-R>=line("'<") <CR>,<C-R>=line("'>") <CR>p <CR>
 vmap <Leader>gi :Gist<cr>
 map <Leader>gw :!git add . && git commit -m 'WIP' && git push<cr>
 map <Leader>gd :Gdiff<cr>
@@ -54,7 +62,7 @@ map <Leader>gs :Gstatus<cr>
 map <Leader>gc :Gcommit<cr>
 
 " Misc Mappings
-map <Leader>i mmgg=G`m<CR>
+map <Leader>i mmgg=G`m<CR> " Fix Indentations
 
 let g:fuzzy_ignore = "*.png;*.PNG;*.JPG;*.jpg;*.GIF;*.gif;vendor/**;coverage/**;tmp/**;rdoc/**"
 
@@ -66,7 +74,11 @@ if executable('ag')
   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 endif
 
+" vim.gist configuration
 let g:gist_clip_command = 'pbcopy'
 let g:gist_detect_filetype = 1
 let g:gist_post_private = 1
 let g:gist_open_browser_after_post = 1
+
+" vim-rspec configuration
+let g:rspec_command = "Dispatch rspec {spec}"

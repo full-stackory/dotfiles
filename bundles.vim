@@ -1,16 +1,14 @@
-set nocompatible
-filetype off
-
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 Bundle 'gmarik/vundle'
 
 " Bundle plugins
-Bundle 'altercation/vim-colors-solarized'
 Bundle 'tpope/vim-unimpaired'
+Bundle 'rking/ag.vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-bundler'
+Bundle 'tpope/vim-markdown'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'tpope/vim-rake'
 Bundle 'tpope/vim-bundler'
@@ -18,7 +16,7 @@ Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-haml'
 Bundle 'tpope/vim-dispatch'
-Bundle 'skwp/vim-rspec'
+Bundle 'thoughtbot/vim-rspec'
 Bundle 'pangloss/vim-javascript'
 Bundle 'nono/vim-handlebars'
 Bundle 'cakebaker/scss-syntax.vim'
@@ -31,9 +29,11 @@ Bundle 'jcfaria/Vim-R-plugin'
 Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
 Bundle 'airblade/vim-gitgutter'
+Bundle 'juvenn/mustache.vim'
 
 Bundle 'kana/vim-textobj-user'
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'tomtom/tlib_vim'
 Bundle 'garbas/vim-snipmate'
 Bundle 'kaichen/vim-snipmate-ruby-snippets'
+Bundle 'terryma/vim-multiple-cursors'
