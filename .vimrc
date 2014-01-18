@@ -74,6 +74,9 @@ if executable('ag')
   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 endif
 
+" vim.handlebar abbreviations
+let g:mustache_abbreviations = 1
+
 " vim.gist configuration
 let g:gist_clip_command = 'pbcopy'
 let g:gist_detect_filetype = 1
