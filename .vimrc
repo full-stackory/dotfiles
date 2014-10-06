@@ -1,10 +1,12 @@
 set nocompatible
+filetype off
 source ~/dotfiles/bundles.vim
 runtime macros/matchit.vim
 
 syntax enable
-filetype plugin indent on
-colorscheme darkzen
+set background=dark
+let g:solarized_termcolors = 256
+colorscheme solarized
 
 set guifont=Source\ Code\ Pro:h14
 set number relativenumber
@@ -28,8 +30,6 @@ set hlsearch
 set shell=/bin/bash
 
 :set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%)
-
-let g:solarized_termcolors=256
 
 if exists('+colorcolumn')
   set colorcolumn=80
@@ -89,3 +89,7 @@ let g:gist_open_browser_after_post = 1
 
 " vim-rspec configuration
 let g:rspec_command = "Dispatch rspec {spec}"
+
+" vim-airline configuration
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_alt_sep = '>'
