@@ -25,6 +25,7 @@ set laststatus=2
 set showmatch
 set incsearch
 set hlsearch
+set shell=/bin/bash
 
 :set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%)
 
@@ -46,6 +47,9 @@ map <leader>v :view %%
 nmap <leader>es :sp <C-R>=expand('%:h').'/'<cr>
 nmap <leader>ev :vsp <C-R>=expand('%:h').'/'<cr>
 nmap <leader>et :tabe <C-R>=expand('%:h').'/'<cr>
+
+" Vim Tab Mappings
+map <C-t> <esc>:tabnew<CR>
 
 " Rspec.vim mappings
 map <Leader>t :call RunCurrentSpecFile()<CR>
