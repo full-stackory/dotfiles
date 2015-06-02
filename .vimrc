@@ -27,8 +27,6 @@ set incsearch
 set hlsearch
 set shell=/bin/bash
 
-:set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%)
-
 let g:solarized_termcolors=256
 
 if exists('+colorcolumn')
@@ -36,6 +34,14 @@ if exists('+colorcolumn')
 else
   au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
 endif
+
+" Copy & Paste to system clipboard
+vmap <Leader>y "+y
+vmap <Leader>d "+d
+nmap <Leader>p "+p
+nmap <Leader>P "+P
+vmap <Leader>p "+p
+vmap <Leader>P "+P
 
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
@@ -47,15 +53,16 @@ map <leader>v :view %%
 nmap <leader>es :sp <C-R>=expand('%:h').'/'<cr>
 nmap <leader>ev :vsp <C-R>=expand('%:h').'/'<cr>
 nmap <leader>et :tabe <C-R>=expand('%:h').'/'<cr>
+nmap <leader>sj :SplitjoinSplit<cr>
+nmap <leader>sk :SplitjoinJoin<cr>
 
 " Vim Tab Mappings
 map <C-t> <esc>:tabnew<CR>
 
 " Rspec.vim mappings
-map <Leader>t :call RunCurrentSpecFile()<CR>
-map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
-map <Leader>a :call RunAllSpecs()<CR>
+map <Leader>t :VroomRunTestFile<CR>
+map <Leader>s :VroomRunNearestTest<CR>
+map <Leader>l :VroomRunLastTest<CR>
 
 " Git Mappings
 vmap <Leader>gb :<C-U>!git blame <C-R>=expand("%:p") <CR> \| sed -n <C-R>=line("'<") <CR>,<C-R>=line("'>") <CR>p <CR>
@@ -87,5 +94,12 @@ let g:gist_detect_filetype = 1
 let g:gist_post_private = 1
 let g:gist_open_browser_after_post = 1
 
-" vim-rspec configuration
-let g:rspec_command = "Dispatch rspec {spec}"
+" vim-vroom configuration
+let g:vroom_use_dispatch = 1
+let g:vroom_test_unit_command='ruby -I. '
+
+" airline configuration
+let g:airline_theme='powerlineish'
+let g:airline_left_sep=''
+let g:airline_right_sep=''
+let g:airline_section_z=''
