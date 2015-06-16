@@ -5,8 +5,8 @@ runtime macros/matchit.vim
 
 syntax enable
 set background=dark
-let g:solarized_termcolors = 256
 colorscheme solarized
+let g:solarized_termcolors=256
 
 set guifont=Source\ Code\ Pro:h14
 set number relativenumber
@@ -29,7 +29,6 @@ set incsearch
 set hlsearch
 set shell=/bin/bash
 
-let g:solarized_termcolors=256
 
 if exists('+colorcolumn')
   set colorcolumn=80
