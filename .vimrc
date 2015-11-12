@@ -28,7 +28,7 @@ set showmatch
 set incsearch
 set hlsearch
 set shell=/bin/bash
-
+set tags+=gems.tags
 
 if exists('+colorcolumn')
   set colorcolumn=80
