@@ -41,7 +41,8 @@ Plugin 'garbas/vim-snipmate'
 Plugin 'kaichen/vim-snipmate-ruby-snippets'
 Plugin 'terryma/vim-multiple-cursors'
 
-Plugin 'fatih/vim-go'
+Plugin 'elixir-lang/vim-elixir'
+
 
 call vundle#end()
 filetype plugin indent on

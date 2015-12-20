@@ -64,7 +64,7 @@ map <C-t> <esc>:tabnew<CR>
 map <Leader>t :VroomRunTestFile<CR>
 map <Leader>s :VroomRunNearestTest<CR>
 map <Leader>l :VroomRunLastTest<CR>
-
+let g:vroom_ignore_color_flag = 1
 " Git Mappings
 vmap <Leader>gb :<C-U>!git blame <C-R>=expand("%:p") <CR> \| sed -n <C-R>=line("'<") <CR>,<C-R>=line("'>") <CR>p <CR>
 vmap <Leader>gi :Gist<cr>
