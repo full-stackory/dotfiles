@@ -102,19 +102,22 @@ let g:vroom_use_dispatch = 1
 let g:vroom_test_unit_command='ruby -I. '
 
 " airline configuration
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+
 set laststatus=2               " enable airline even if no splits
-  let g:airline_theme='luna'
-  let g:airline_powerline_fonts=1
-  let g:airline_enable_branch=1
-  let g:airline_enable_syntastic=1
-  let g:airline_powerline_fonts = 1
-  let g:airline_left_sep = ''
-  let g:airline_right_sep = ''
-  let g:airline_linecolumn_prefix = '␊ '
-  let g:airline_linecolumn_prefix = '␤ '
-  let g:airline_linecolumn_prefix = '¶ '
-  let g:airline_branch_prefix = '⎇ '
-  let g:airline_paste_symbol = 'ρ'
-  let g:airline_paste_symbol = 'Þ'
-  let g:airline_paste_symbol = '∥'
-  let g:airline#extensions#tabline#enabled = 0
+let g:airline_theme='luna'
+let g:airline_powerline_fonts = 1
+let g:airline_left_sep = ''
+let g:airline_right_sep = ''
+let g:airline_symbols.linenr = '␊ '
+let g:airline_symbols.linenr = '␤ '
+let g:airline_symbols.linenr = '¶ '
+let g:airline_symbols.branch = '⎇ '
+let g:airline_symbols.paste = 'ρ'
+let g:airline_symbols.paste = 'Þ'
+let g:airline_symbols.paste = '∥'
+let g:airline#extensions#tabline#enabled = 0
+let g:airline#extensions#syntastic#enable = 1
+let g:airline#extensions#branch#enabled = 1
