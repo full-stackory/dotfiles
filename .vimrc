@@ -4,7 +4,7 @@ source ~/dotfiles/bundles.vim
 runtime macros/matchit.vim
 
 syntax enable
-set background=dark
+set background=light
 colorscheme solarized
 let g:solarized_termcolors=256
 
@@ -72,6 +72,9 @@ map <Leader>gw :!git add . && git commit -m 'WIP' && git push<cr>
 map <Leader>gd :Gdiff<cr>
 map <Leader>gs :Gstatus<cr>
 map <Leader>gc :Gcommit<cr>
+
+" Elixir Test Running
+map <Leader>et :!mix test<cr>
 
 " Misc Mappings
 map <Leader>i mmgg=G`m<CR> " Fix Indentations
