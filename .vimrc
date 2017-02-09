@@ -60,11 +60,10 @@ nmap <leader>sk :SplitjoinJoin<cr>
 " Vim Tab Mappings
 map <C-t> <esc>:tabnew<CR>
 
-" Rspec.vim mappings
-map <Leader>t :VroomRunTestFile<CR>
-map <Leader>s :VroomRunNearestTest<CR>
-map <Leader>l :VroomRunLastTest<CR>
-let g:vroom_ignore_color_flag = 1
+" Test mappings
+map <Leader>t :Dispatch rake test TEST=%<CR>
+map <Leader>a :Dispatch rake test<CR>
+
 " Git Mappings
 vmap <Leader>gb :<C-U>!git blame <C-R>=expand("%:p") <CR> \| sed -n <C-R>=line("'<") <CR>,<C-R>=line("'>") <CR>p <CR>
 vmap <Leader>gi :Gist<cr>
@@ -90,9 +89,6 @@ if executable('ag')
   " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 endif
-
-" vim.handlebar abbreviations
-let g:mustache_abbreviations = 1
 
 " vim.gist configuration
 let g:gist_clip_command = 'pbcopy'
