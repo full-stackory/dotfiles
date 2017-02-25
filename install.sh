@@ -1,3 +1,5 @@
+#!/bin/sh
+
 cd
 git clone git@github.com:phereford/dotfiles.git ~/.dotfiles
 cd .dotfiles
