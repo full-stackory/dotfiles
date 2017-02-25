@@ -97,6 +97,8 @@ alias dash="cd ~/code/ff/dashboard"
 alias dashf="cd ~/code/ff/dashboard-frontend"
 alias auth="cd ~/code/ff/auth"
 alias report="cd ~/code/ff/reporting_engine"
+alias sf="cd ~/code/ff/sf_service"
+alias vision="cd ~/code/vision"
 
 ## Water
 water_time=10800 # Set time interval in seconds
@@ -132,4 +134,4 @@ spaceship_user() {
 }
 
 ## Prompt
-PROMPT='%{%f%b%k%}$(build_prompt)$(drink_water)'
+PROMPT='%{%f%b%k%}$(build_prompt)$(drink_water) '
