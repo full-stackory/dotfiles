@@ -32,6 +32,7 @@ Plugin 'mattn/gist-vim'
 Plugin 'mxw/vim-jsx'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'AndrewRadev/splitjoin.vim'
+Plugin 'wfleming/vim-codeclimate'
 
 Plugin 'kana/vim-textobj-user'
 Plugin 'MarcWeber/vim-addon-mw-utils'

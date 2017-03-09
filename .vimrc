@@ -80,6 +80,11 @@ map <Leader>i mmgg=G`m<CR> " Fix Indentations
 map <Leader><Left> <esc>:tabprevious<CR>
 map <Leader><Right> <esc>:tabnext<CR>
 
+" Codecliamte Mappings
+nmap <Leader>aa :CodeClimateAnalyzeProject<CR>
+nmap <Leader>ao :CodeClimateAnalyzeOpenFiles<CR>
+nmap <Leader>af :CodeClimateAnalyzeCurrentFile<CR>
+
 let g:fuzzy_ignore = "*.png;*.PNG;*.JPG;*.jpg;*.GIF;*.gif;vendor/**;coverage/**;tmp/**;rdoc/**"
 
 if executable('ag')
