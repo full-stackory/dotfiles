@@ -88,6 +88,9 @@ source $ZSH/oh-my-zsh.sh
 
 . $HOME/.asdf/completions/asdf.bash
 
+## My aliases
+alias beg="bundle exec guard"
+
 ## FF Aliases
 alias ff="cd ~/code/ff"
 alias aa="cd ~/code/ff/approval_analytics"
