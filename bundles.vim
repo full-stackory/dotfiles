@@ -44,6 +44,7 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'craigemery/vim-autotag'
 
+Plugin 'kurocode25/mdforvim'
 
 call vundle#end()
 filetype plugin indent on
