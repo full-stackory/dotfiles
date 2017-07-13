@@ -80,6 +80,11 @@ map <Leader>i mmgg=G`m<CR> " Fix Indentations
 map <Leader><Left> <esc>:tabprevious<CR>
 map <Leader><Right> <esc>:tabnext<CR>
 
+" Codecliamte Mappings
+nmap <Leader>aa :CodeClimateAnalyzeProject<CR>
+nmap <Leader>ao :CodeClimateAnalyzeOpenFiles<CR>
+nmap <Leader>af :CodeClimateAnalyzeCurrentFile<CR>
+
 let g:fuzzy_ignore = "*.png;*.PNG;*.JPG;*.jpg;*.GIF;*.gif;vendor/**;coverage/**;tmp/**;rdoc/**"
 
 if executable('ag')
@@ -120,3 +125,24 @@ let g:airline_symbols.paste = '∥'
 let g:airline#extensions#tabline#enabled = 0
 let g:airline#extensions#syntastic#enable = 1
 let g:airline#extensions#branch#enabled = 1
+
+" This is a local, per-project `.vimrc`.
+" It maps `H` to read in line coverage from the "coverage/raw" file and
+" mark uncovered lines as errors using Vim :signs functionality.
+
+highlight SignColumn NONE
+sign define covpos text=• texthl=String linehl=Success
+sign define covneg linehl=Error text=𐄂 texthl=HelpDebug
+
+function! s:SignCoverage(file)
+  let output = system('grep "'.a:file.'" coverage/raw')
+  let lines = split(output, '\n')
+  exec 'sign unplace * buffer='.bufnr('%')
+  for line in lines
+    let [ type, lnum, fname ] = split(line, ' ')
+    let name = type == '+' ? 'covpos' : 'covneg'
+    exec 'sign place '.lnum.' line='.lnum.' name='.name.' buffer='.bufnr('%')
+  endfor
+endfunction
+
+map H :call <SID>SignCoverage(expand('%:p'))<cr>

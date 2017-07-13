@@ -69,6 +69,8 @@ source $ZSH/oh-my-zsh.sh
 #   export EDITOR='mvim'
 # fi
 
+export GOPATH="/Users/patrickhereford"
+
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
@@ -87,6 +89,9 @@ source $ZSH/oh-my-zsh.sh
 . $HOME/.asdf/asdf.sh
 
 . $HOME/.asdf/completions/asdf.bash
+
+## My aliases
+alias beg="bundle exec guard"
 
 ## FF Aliases
 alias ff="cd ~/code/ff"
