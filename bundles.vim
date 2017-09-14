@@ -33,6 +33,7 @@ Plugin 'mxw/vim-jsx'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'AndrewRadev/splitjoin.vim'
 Plugin 'wfleming/vim-codeclimate'
+Plugin 'fatih/vim-go'
 
 Plugin 'kana/vim-textobj-user'
 Plugin 'MarcWeber/vim-addon-mw-utils'
@@ -44,7 +45,6 @@ Plugin 'terryma/vim-multiple-cursors'
 
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'craigemery/vim-autotag'
-
 
 call vundle#end()
 filetype plugin indent on

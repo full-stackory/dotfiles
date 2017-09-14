@@ -95,15 +95,17 @@ alias beg="bundle exec guard"
 
 ## FF Aliases
 alias ff="cd ~/code/ff"
-alias aa="cd ~/code/ff/approval_analytics"
-alias dmf="cd ~/code/ff/dmf"
-alias bank="cd ~/code/ff/ffinancing"
+alias uw="cd ~/code/ff/underwriting"
+alias fund="cd ~/code/ff/funding"
+alias bank="cd ~/code/ff/banking"
 alias dash="cd ~/code/ff/dashboard"
 alias dashf="cd ~/code/ff/dashboard-frontend"
 alias auth="cd ~/code/ff/auth"
 alias report="cd ~/code/ff/reporting_engine"
 alias sf="cd ~/code/ff/sf_service"
 alias vision="cd ~/code/vision"
+alias aaf=" cd ~/code/ff/approval-analytics-frontend"
+alias pp="cd ~/code/ff/partner-portal"
 
 ## Water
 water_time=10800 # Set time interval in seconds
