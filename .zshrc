@@ -1,5 +1,8 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/.config/yarn/global/node_modules/.bin:$PATH
+
+source /Users/patrickhereford/code/ff/development_secrets/secrets.sh
 
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/patrickhereford/.oh-my-zsh
@@ -70,6 +73,7 @@ source $ZSH/oh-my-zsh.sh
 # fi
 
 export GOPATH="/Users/patrickhereford"
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/"
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -142,3 +146,4 @@ spaceship_user() {
 
 ## Prompt
 PROMPT='%{%f%b%k%}$(build_prompt)$(drink_water) '
+export PATH="/usr/local/opt/openssl/bin:$PATH"
