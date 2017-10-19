@@ -1,4 +1,5 @@
 set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=/usr/local/opt/fzf
 call vundle#begin()
 
 Plugin 'gmarik/vundle'
@@ -34,6 +35,7 @@ Plugin 'AndrewRadev/splitjoin.vim'
 Plugin 'wfleming/vim-codeclimate'
 Plugin 'fatih/vim-go'
 Plugin 'junegunn/fzf'
+Plugin 'junegunn/fzf.vim'
 
 Plugin 'kana/vim-textobj-user'
 Plugin 'MarcWeber/vim-addon-mw-utils'

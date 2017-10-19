@@ -57,6 +57,11 @@ nmap <leader>et :tabe <C-R>=expand('%:h').'/'<cr>
 nmap <leader>sj :SplitjoinSplit<cr>
 nmap <leader>sk :SplitjoinJoin<cr>
 
+" fzf
+nmap ; :Buffers<CR>
+nmap <Leader>f :Files<CR>
+nmap <Leader>r :Tags<CR>
+
 " Vim Tab Mappings
 map <C-t> <esc>:tabnew<CR>
 

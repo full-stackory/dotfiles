@@ -147,3 +147,19 @@ spaceship_user() {
 ## Prompt
 PROMPT='%{%f%b%k%}$(build_prompt)$(drink_water) '
 export PATH="/usr/local/opt/openssl/bin:$PATH"
+
+
+# fzf via Homebrew
+if [ -e /usr/local/opt/fzf/shell/completion.zsh ]; then
+  source /usr/local/opt/fzf/shell/key-bindings.zsh
+  source /usr/local/opt/fzf/shell/completion.zsh
+fi
+
+# fzf + ag configuration
+export FZF_DEFAULT_COMMAND='ag --nocolor -g ""'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_ALT_C_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_DEFAULT_OPTS='
+--color dark,hl:33,hl+:37,fg+:235,bg+:136,fg+:254
+--color info:254,prompt:37,spinner:108,pointer:235,marker:235
+'
