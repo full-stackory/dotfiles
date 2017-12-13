@@ -110,6 +110,7 @@ alias sf="cd ~/code/ff/sf_service"
 alias vision="cd ~/code/vision"
 alias aaf=" cd ~/code/ff/approval-analytics-frontend"
 alias pp="cd ~/code/ff/partner-portal"
+alias mp="cd ~/code/ff/merchant-portal"
 
 ## Water
 water_time=10800 # Set time interval in seconds
