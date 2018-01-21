@@ -2,10 +2,10 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=$HOME/.config/yarn/global/node_modules/.bin:$PATH
 
-source /Users/patrickhereford/code/ff/development_secrets/secrets.sh
+source /Users/phereford/code/ff/development_secrets/secrets.sh
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/patrickhereford/.oh-my-zsh
+export ZSH=/Users/phereford/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
