@@ -1,6 +1,7 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=$HOME/.config/yarn/global/node_modules/.bin:$PATH
+export PATH=$HOME/.asdf/installs/nodejs/8.4.0/.npm/bin:$PATH
 
 source /Users/phereford/code/ff/development_secrets/secrets.sh
 

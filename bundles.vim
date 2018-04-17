@@ -6,6 +6,7 @@ Plugin 'gmarik/vundle'
 Plugin 'altercation/vim-colors-solarized'
 
 " Bundle plugins
+Plugin 'tomlion/vim-solidity'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'edkolev/tmuxline.vim'
