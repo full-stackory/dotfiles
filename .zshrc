@@ -74,7 +74,7 @@ source $ZSH/oh-my-zsh.sh
 # fi
 
 export GOPATH="/Users/patrickhereford"
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/"
+export JAVA_HOME="/Library/Java/Home"
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
