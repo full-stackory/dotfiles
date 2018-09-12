@@ -1,11 +1,12 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=$HOME/.config/yarn/global/node_modules/.bin:$PATH
+export PATH=$HOME/.asdf/installs/nodejs/8.4.0/.npm/bin:$PATH
 
-source /Users/patrickhereford/code/ff/development_secrets/secrets.sh
+source /Users/phereford/code/ff/development_secrets/secrets.sh
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/patrickhereford/.oh-my-zsh
+export ZSH=/Users/phereford/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -73,7 +74,7 @@ source $ZSH/oh-my-zsh.sh
 # fi
 
 export GOPATH="/Users/patrickhereford"
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/"
+export JAVA_HOME="/Library/Java/Home"
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"

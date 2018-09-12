@@ -78,7 +78,8 @@ map <Leader>gs :Gstatus<cr>
 map <Leader>gc :Gcommit<cr>
 
 " Elixir Test Running
-map <Leader>et :!mix test<cr>
+map <Leader>ex :Dispatch mix test<cr>
+map <Leader>iex :Dispatch iex -S mix test<cr>
 
 " Misc Mappings
 map <Leader>i mmgg=G`m<CR> " Fix Indentations
