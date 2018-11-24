@@ -3,10 +3,8 @@
 export PATH=$HOME/.config/yarn/global/node_modules/.bin:$PATH
 export PATH=$HOME/.asdf/installs/nodejs/8.4.0/.npm/bin:$PATH
 
-source /Users/phereford/code/ff/development_secrets/secrets.sh
-
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/phereford/.oh-my-zsh
+export ZSH=/Users/patrickhereford/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -91,49 +89,13 @@ export JAVA_HOME="/Library/Java/Home"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+alias python='python3'
 . $HOME/.asdf/asdf.sh
 
 . $HOME/.asdf/completions/asdf.bash
 
-## My aliases
 alias beg="bundle exec guard"
 
-## FF Aliases
-alias ff="cd ~/code/ff"
-alias uw="cd ~/code/ff/underwriting"
-alias fund="cd ~/code/ff/funding"
-alias bank="cd ~/code/ff/banking"
-alias dash="cd ~/code/ff/dashboard"
-alias dashf="cd ~/code/ff/dashboard-frontend"
-alias auth="cd ~/code/ff/auth"
-alias report="cd ~/code/ff/reporting_engine"
-alias sf="cd ~/code/ff/sf_service"
-alias vision="cd ~/code/vision"
-alias aaf=" cd ~/code/ff/approval-analytics-frontend"
-alias pp="cd ~/code/ff/partner-portal"
-alias mp="cd ~/code/ff/merchant-portal"
-
-## Water
-water_time=10800 # Set time interval in seconds
-
-drink_water() {
-thirsty=`cat $HOME/.water`
-last_time=`cat $HOME/.water_last_time`
-
-  if [[ $thirsty == false ]]; then
-    echo "$[$(date +%s) + $water_time]" > $HOME/.water_last_time
-    echo "true" > $HOME/.water
-    echo -n " Water is essential "
-
-  elif [[ $[last_time] -lt $(date +%s) ]]; then
-    echo -n "💧 You're thirsty"
-  fi
-}
-
-not_thirsty() {
-echo "false" > $HOME/.water
-echo "0" > $HOME/.water_last_time
-}
 # Username.
 # If user is root, then pain it in red. Otherwise, just print in yellow.
 spaceship_user() {
@@ -147,7 +109,7 @@ spaceship_user() {
 }
 
 ## Prompt
-PROMPT='%{%f%b%k%}$(build_prompt)$(drink_water) '
+PROMPT='%{%f%b%k%}$(build_prompt) '
 export PATH="/usr/local/opt/openssl/bin:$PATH"
 
 
@@ -165,3 +127,5 @@ export FZF_DEFAULT_OPTS='
 --color dark,hl:33,hl+:37,fg+:235,bg+:136,fg+:254
 --color info:254,prompt:37,spinner:108,pointer:235,marker:235
 '
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

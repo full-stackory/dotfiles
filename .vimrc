@@ -1,6 +1,6 @@
 set nocompatible
 filetype off
-source ~/dotfiles/bundles.vim
+source ~/.dotfiles/bundles.vim
 runtime macros/matchit.vim
 
 syntax enable
@@ -65,31 +65,25 @@ nmap <Leader>r :Tags<CR>
 " Vim Tab Mappings
 map <C-t> <esc>:tabnew<CR>
 
-" Test mappings
+" Ruby Test mappings
 map <Leader>t :Dispatch rake test TEST=%<CR>
 map <Leader>a :Dispatch rake test<CR>
-
-" Git Mappings
-vmap <Leader>gb :<C-U>!git blame <C-R>=expand("%:p") <CR> \| sed -n <C-R>=line("'<") <CR>,<C-R>=line("'>") <CR>p <CR>
-vmap <Leader>gi :Gist<cr>
-map <Leader>gw :!git add . && git commit -m 'WIP' && git push<cr>
-map <Leader>gd :Gdiff<cr>
-map <Leader>gs :Gstatus<cr>
-map <Leader>gc :Gcommit<cr>
 
 " Elixir Test Running
 map <Leader>ex :Dispatch mix test<cr>
 map <Leader>iex :Dispatch iex -S mix test<cr>
 
+" Git Mappings
+vmap <Leader>gb :<C-U>!git blame <C-R>=expand("%:p") <CR> \| sed -n <C-R>=line("'<") <CR>,<C-R>=line("'>") <CR>p <CR>
+map <Leader>gw :!git add . && git commit -m 'WIP' && git push<cr>
+map <Leader>gd :Gdiff<cr>
+map <Leader>gs :Gstatus<cr>
+map <Leader>gc :Gcommit<cr>
+
 " Misc Mappings
 map <Leader>i mmgg=G`m<CR> " Fix Indentations
 map <Leader><Left> <esc>:tabprevious<CR>
 map <Leader><Right> <esc>:tabnext<CR>
-
-" Codecliamte Mappings
-nmap <Leader>aa :CodeClimateAnalyzeProject<CR>
-nmap <Leader>ao :CodeClimateAnalyzeOpenFiles<CR>
-nmap <Leader>af :CodeClimateAnalyzeCurrentFile<CR>
 
 let g:fuzzy_ignore = "*.png;*.PNG;*.JPG;*.jpg;*.GIF;*.gif;vendor/**;coverage/**;tmp/**;rdoc/**"
 
@@ -103,10 +97,6 @@ let g:gist_clip_command = 'pbcopy'
 let g:gist_detect_filetype = 1
 let g:gist_post_private = 1
 let g:gist_open_browser_after_post = 1
-
-" vim-vroom configuration
-let g:vroom_use_dispatch = 1
-let g:vroom_test_unit_command='ruby -I. '
 
 " airline configuration
 if !exists('g:airline_symbols')
