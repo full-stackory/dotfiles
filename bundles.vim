@@ -3,12 +3,11 @@ set rtp+=/usr/local/opt/fzf
 call vundle#begin()
 
 Plugin 'gmarik/vundle'
-Plugin 'altercation/vim-colors-solarized'
 
 " Bundle plugins
+Plugin 'morhetz/gruvbox'
 Plugin 'tomlion/vim-solidity'
 Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
 Plugin 'edkolev/tmuxline.vim'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'rking/ag.vim'

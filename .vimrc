@@ -5,7 +5,7 @@ runtime macros/matchit.vim
 
 syntax enable
 set background=dark
-colorscheme solarized
+colorscheme gruvbox
 let g:solarized_termcolors=256
 
 set guifont=Source\ Code\ Pro:h14
@@ -104,7 +104,7 @@ if !exists('g:airline_symbols')
 endif
 
 set laststatus=2               " enable airline even if no splits
-let g:airline_theme='luna'
+let g:airline_theme='gruvbox'
 let g:airline_powerline_fonts = 1
 let g:airline_left_sep = ''
 let g:airline_right_sep = ''

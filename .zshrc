@@ -1,10 +1,11 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
+ZSH_DISABLE_COMPFIX=true
 export PATH=$HOME/.config/yarn/global/node_modules/.bin:$PATH
 export PATH=$HOME/.asdf/installs/nodejs/8.4.0/.npm/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/patrickhereford/.oh-my-zsh
+export ZSH=/Users/streamer/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -71,7 +72,7 @@ source $ZSH/oh-my-zsh.sh
 #   export EDITOR='mvim'
 # fi
 
-export GOPATH="/Users/patrickhereford"
+export GOPATH="/Users/streamer"
 export JAVA_HOME="/Library/Java/Home"
 
 # Compilation flags
