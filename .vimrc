@@ -73,6 +73,10 @@ map <Leader>a :Dispatch rake test<CR>
 map <Leader>ex :Dispatch mix test<cr>
 map <Leader>iex :Dispatch iex -S mix test<cr>
 
+" General Elixir Mappings
+map <Leader>ff :Dispatch mix format <C-R>=expand('%')<cr><cr>
+map <Leader>dz :Dispatch mix dialyzer<cr>
+
 " Git Mappings
 vmap <Leader>gb :<C-U>!git blame <C-R>=expand("%:p") <CR> \| sed -n <C-R>=line("'<") <CR>,<C-R>=line("'>") <CR>p <CR>
 map <Leader>gw :!git add . && git commit -m 'WIP' && git push<cr>

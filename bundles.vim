@@ -43,5 +43,8 @@ Plugin 'andyl/vim-snipmate-elixir'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'craigemery/vim-autotag'
 
+Plugin 'rust-lang/rust.vim'
+Plugin 'majutsushi/tagbar'
+
 call vundle#end()
 filetype plugin indent on
