@@ -73,10 +73,6 @@ map <Leader>a :Dispatch rake test<CR>
 map <Leader>ex :Dispatch mix test<cr>
 map <Leader>iex :Dispatch iex -S mix test<cr>
 
-" General Elixir Mappings
-map <Leader>ff :Dispatch mix format <C-R>=expand('%')<cr><cr>
-map <Leader>dz :Dispatch mix dialyzer<cr>
-
 " Git Mappings
 vmap <Leader>gb :<C-U>!git blame <C-R>=expand("%:p") <CR> \| sed -n <C-R>=line("'<") <CR>,<C-R>=line("'>") <CR>p <CR>
 map <Leader>gw :!git add . && git commit -m 'WIP' && git push<cr>
@@ -143,3 +139,32 @@ function! s:SignCoverage(file)
 endfunction
 
 map H :call <SID>SignCoverage(expand('%:p'))<cr>
+
+let g:tagbar_type_elixir = {
+    \ 'ctagstype' : 'elixir',
+    \ 'kinds' : [
+        \ 'p:protocols',
+        \ 'm:modules',
+        \ 'e:exceptions',
+        \ 'y:types',
+        \ 'd:delegates',
+        \ 'f:functions',
+        \ 'c:callbacks',
+        \ 'a:macros',
+        \ 't:tests',
+        \ 'i:implementations',
+        \ 'o:operators',
+        \ 'r:records'
+    \ ],
+    \ 'sro' : '.',
+    \ 'kind2scope' : {
+        \ 'p' : 'protocol',
+        \ 'm' : 'module'
+    \ },
+    \ 'scope2kind' : {
+        \ 'protocol' : 'p',
+        \ 'module' : 'm'
+    \ },
+    \ 'sort' : 0
+\ }
+
