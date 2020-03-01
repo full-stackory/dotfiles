@@ -18,3 +18,8 @@ git clone https://github.com/VundleVim/Vundle.vim ~/.vim/bundle/Vundle.vim
 source ~/.vimrc
 source ~/.zshrc
 vim +PluginInstall +qall
+
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
+brew install powerlevel9k
+brew install zsh-autosuggestions
+brew install zsh-syntax-highlighting
